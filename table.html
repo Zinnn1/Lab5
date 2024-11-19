@@ -1,0 +1,101 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Таблица</title>
+  <link rel="stylesheet" href="table.css">
+ </head>
+ <body>
+	<div class="header">
+        <a href="index.html">Основная страница</a>
+        <a href="page2.html">Позиционирование элементов</a>
+		    <a href="table.html">Таблица</a>
+        </div>
+        
+        <form id="Form">
+          <div class="contentRight">
+                  <label for="#">#:</label>
+                  <input type="text" id="id" name="id" value="">
+                  <label for="First Name">First Name:</label>
+                  <input type="text" id="FirstName" name="FirstName" value="">
+                  <label for="Last Name">Last Name:</label>
+                  <input type="text" id="LastName" name="LastName" value="">
+                  <label for="Username">Username:</label>
+                  <input type="text" id="Username" name="Username" value="">             
+                  <button type="submit">Добавить</button>
+              
+          </div>
+      </form>
+
+        <table>
+            <caption>
+                Студенты
+            </caption>
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+               
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>         
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Jake</td>
+                <td>Propper</td>
+                <td>vso</td>               
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Satoshi</td>
+                <td>Nakamoto</td>
+                <td>@btc</td>                
+              </tr>
+            </tbody>
+        </table>
+        <script>
+          const form = document.getElementById('Form');
+          const tableBody = document.querySelector('tbody');
+
+  
+          form.addEventListener('submit', function(event) {
+              event.preventDefault();
+  
+              const id = document.getElementById('id').value;
+              const FirstName = document.getElementById('FirstName').value; 
+              const LastName = document.getElementById('LastName').value;
+              const Username = document.getElementById('Username').value;
+              
+              const newRow = document.createElement('tr');
+              newRow.innerHTML = `
+                  <td>${id}</td>
+                  <td>${FirstName}</td>
+                  <td>${LastName}</td>
+                  <td>${Username}</td>                
+              `;
+              tableBody.appendChild(newRow);
+  
+              form.reset();
+          });
+      </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    background-color: #53a0df;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    background-color:rgb(4, 49, 196);
+    padding: 10px;
+}
+.header a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: verdana;
+    color: #c9f7ff;
+    font-size: 18px;
+}
+td{
+    font-size: 25px;
+    font-family: verdana;
+    color: rgb(255, 84, 149);
+    padding: 5px;
+}
+th{
+    font-size: 25px;
+    font-family: verdana;
+    background-color: rgb(27, 0, 100);
+    color: whitesmoke;
+    padding: 5px;
+    text-align: left;
+}
+caption{
+    margin-left: 20px;
+    font-family: verdana;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 30px;
+}
+table,th,td{
+    border: 2px solid white;
+    border-collapse:collapse;
+}
+tr:nth-child(even){
+    background-color: rgb(185, 216, 173);
+}
